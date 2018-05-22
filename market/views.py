@@ -54,7 +54,7 @@ def category(request, category_id):
         goodses = paginator.page(1)
     except EmptyPage:
         goodses = paginator.page(paginator.num_pages)
-
+    # dynamically arrange page number
     for i in range(1, paginator.num_pages + 1):
         page_list.append(i)
 
